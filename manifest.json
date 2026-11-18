@@ -1,0 +1,13 @@
+{
+    "manifest_version": 3,
+    "name": "Table Exporter",
+    "version": "2.0",
+    "description": "Export any HTML table to CSV/Excel with multi-page support",
+    "permissions": [
+        "activeTab",
+        "scripting"
+    ],
+    "action": {
+        "default_popup": "popup.html"
+    }
+}

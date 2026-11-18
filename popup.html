@@ -1,0 +1,77 @@
+<!DOCTYPE html>
+<html>
+
+<head>
+    <meta charset="utf-8" />
+    <style>
+        body {
+            width: 240px;
+            font-family: sans-serif;
+            padding: 12px;
+        }
+
+        label,
+        select,
+        button {
+            display: block;
+            width: 100%;
+            margin-top: 8px;
+        }
+
+        button {
+            padding: 8px;
+            cursor: pointer;
+        }
+
+        #status {
+            margin-top: 10px;
+            font-size: 12px;
+            color: #444;
+        }
+
+        input[type=text],
+        #nextSel {
+            width: 100%;
+            box-sizing: border-box;
+            margin-top: 8px;
+        }
+    </style>
+</head>
+
+<body>
+    <b>Export table</b>
+
+    <label>Table on this page
+        <select id="table"></select>
+    </label>
+
+    <label>Format
+        <select id="format">
+            <option value="csv">CSV</option>
+            <option value="xlsx">Excel (.xlsx)</option>
+        </select>
+    </label>
+
+    <label>Pagination
+        <select id="mode">
+            <option value="next">Click "Next" button</option>
+            <option value="scroll">Infinite scroll</option>
+            <option value="none">Current page only</option>
+            <option value="url">Page URL (?pageNumber=2)</option>
+        </select>
+    </label>
+
+    <label>Next button selector (optional)
+        <input id="nextSel" placeholder="e.g. a.page-next" />
+    </label>
+
+    <label><input type="checkbox" id="numbers" checked /> Convert numbers (1,234 / 5%)</label>
+    <label>Max pages (blank = all)
+        <input id="maxPages" type="number" min="1" placeholder="e.g. 10" />
+    </label>
+    <button id="go">Export</button>
+    <div id="status"></div>
+    <script src="popup.js"></script>
+</body>
+
+</html>
